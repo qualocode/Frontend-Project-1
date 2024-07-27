@@ -1,0 +1,1308 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap");
+
+:root {
+  --color-1: #ffffff;
+  --color-2: #111111;
+  --color-3: #f0c5ce;
+  --color-4: #e25876;
+  --color-5: #a26773;
+  --color-6: #ffb4c4;
+  --color-7: hsl(349, 100%, 97%);
+  --font-1: "Playfair Display", serif;
+  --font-2: "Noto Sans Georgian", sans-serif;
+  --font-3: "Frank Ruhl Libre", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: fit-content;
+  color: var(--color-2);
+  font-family: var(--font-2);
+  background-color: var(--color-1);
+  position: relative;
+  z-index: -100;
+  overflow-x: hidden;
+}
+
+/* ----------------------------------- */
+/*------------ N A V B A R ------------*/
+/* ----------------------------------- */
+
+.nav {
+  width: 100%;
+  height: 60px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-1);
+}
+
+.nav .logo {
+  height: 60%;
+  width: fit-content;
+}
+
+.nav .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav .navLists ul {
+  display: flex;
+}
+.nav .navLists ul li {
+  margin: 0 20px;
+}
+
+.nav .navLists ul li a {
+  color: var(--color-2);
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav .navLists ul li a.active,
+.nav .navLists ul li a:hover {
+  color: var(--color-4);
+}
+
+.nav i {
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* ----------------------------------- */
+/*------------ H E A D E R ------------*/
+/* ----------------------------------- */
+
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 86vh;
+  background: no-repeat center
+    url(/images/minimalist-black-interior-with-black-sofa3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header .headContent {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 8%;
+  color: var(--color-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header .headContent .title {
+  font-family: var(--font-1);
+  font-size: 4rem;
+  white-space: nowrap;
+}
+
+.header .headContent .para {
+  font-size: 1.2rem;
+}
+
+.header .headContent .btn {
+  width: fit-content;
+  padding: 1.4rem 2.4em;
+  border-radius: 60px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-1);
+  letter-spacing: 1px;
+  background-color: transparent;
+  border: 3px solid var(--color-1);
+  cursor: pointer;
+}
+
+.header .headContent .btn:hover {
+  color: var(--color-2);
+  background-color: var(--color-1);
+}
+
+/* ----------------------------------- */
+/*-------------- M A I N --------------*/
+/* ----------------------------------- */
+
+.main {
+  width: 100%;
+  height: fit-content;
+}
+
+/*------------ Section # 1 ------------*/
+
+.main .sctOne {
+  margin-top: 4%;
+  padding: 2rem 6%;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  justify-content: center;
+}
+
+.main .sctOne div {
+  padding: 1.4rem;
+}
+
+.main .sctOne .box1 {
+  width: 40%;
+  font-size: 1.5rem;
+  font-family: var(--font-1);
+}
+
+.main .sctOne .box2 {
+  width: 60%;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.main .sctBtn {
+  margin-top: 26px;
+  padding: 1.2rem 2.2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+  color: var(--color-5);
+  background-color: var(--color-3);
+}
+
+.main .sctBtn:hover {
+  background-color: var(--color-6);
+}
+
+/*------------ Section # 2 ------------*/
+
+.main .sctTwo {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.sctTwo .sliderNavs {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.493);
+  z-index: 20;
+}
+
+.sctTwo .sliderNavs i {
+  width: 100%;
+  height: 100%;
+  font-size: 2.5rem;
+  color: var(--color-1);
+}
+
+.sctTwo .sliderWrapper {
+  width: 100%;
+  height: 340px;
+  display: flex;
+  gap: 11px;
+  overflow-x: auto;
+}
+
+.sctTwo .sliderWrapper::-webkit-scrollbar {
+  appearance: none;
+  display: none;
+}
+
+.sctTwo .sliderWrapper .slides {
+  width: 340px;
+  height: 100%;
+  flex-shrink: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.sliderWrapper .slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+}
+
+.sliderWrapper .slides:hover img {
+  transform: scale(1.1);
+}
+
+/*------------ Section # 3 ------------*/
+
+.main .sctThree {
+  margin: 5rem 0;
+}
+
+.main .sctThree .heading {
+  font-size: 3.4rem;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: var(--font-1);
+}
+
+.main .sctThree .infoContainer {
+  margin-top: 2.6rem;
+  padding: 2rem 6%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+}
+
+.sctThree .infoContainer .infoBoxes {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.infoContainer .infoBoxes .infoIcon {
+  width: 60px;
+  height: 60px;
+}
+
+.infoContainer .infoBoxes .infoIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infoContainer .infoBoxes .infoHeading {
+  font-size: 1.6rem;
+  font-family: var(--font-1);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.infoContainer .infoBoxes .infoSprt {
+  width: 100px;
+  height: 8px;
+  background-color: var(--color-3);
+}
+
+.infoContainer .infoBoxes .infoDesc {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/*----------- Transparent BG ----------*/
+
+#transparentBg {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  background: no-repeat center
+    url(/images/modern-apartment-with-comfortable-sofa-decor-generated-by-ait.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/*------------ Section # 4 ------------*/
+
+.main .sctFour {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.main .sctFour .sct4Desc {
+  padding: 8rem 10%;
+  text-align: center;
+}
+
+.sctFour .sct4Desc .title {
+  font-family: var(--font-1);
+  font-size: 2.8rem;
+  margin-bottom: 14px;
+}
+
+.sctFour .sct4Desc .para {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.main .sctFour .sct4Container {
+  padding: 1rem 4%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.sct4Container .boxes .heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sct4Container .boxes .heading i {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color-6);
+  margin-right: 20px;
+}
+
+.sct4Container .boxes .heading h3 {
+  font-family: var(--font-1);
+  font-size: 1.8rem;
+}
+
+.sct4Container .boxes p {
+  margin: 10px 3% 20px 70px;
+  text-align: justify;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/*------------ Section # 5 & 6 ------------*/
+
+.main .sctFive,
+.main .sctSix {
+  padding: 10% 8%;
+  text-align: center;
+  background-color: var(--color-7);
+}
+
+.main .sctSix {
+  padding-top: 3rem;
+}
+
+.main .sctFive .heading,
+.main .sctSix .heading {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  font-family: var(--font-1);
+}
+
+.main .sctFive .numContainer,
+.main .sctSix .cardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  row-gap: 30px;
+  flex-wrap: wrap;
+}
+
+.sctFive .numContainer .boxes {
+  width: 250px;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  background-color: var(--color-1);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.068);
+}
+
+.numContainer .boxes span:first-child {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--color-6);
+  font-family: var(--font-3);
+}
+
+.numContainer .boxes span:nth-child(2) {
+  font-weight: 500;
+}
+
+.main .sctSix .cardContainer {
+  gap: 2%;
+  row-gap: 30px;
+}
+
+.sctSix .cardContainer .boxes {
+  width: 300px;
+  height: 360px;
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-1);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.068);
+}
+
+.sctSix .cardContainer .boxes p {
+  font-size: 0.9rem;
+  color: rgb(63, 63, 63);
+}
+
+.sctSix .cardContainer .boxes .imgFrame {
+  width: 60px;
+  height: 60px;
+  margin-top: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--color-6);
+}
+
+.cardContainer .boxes .imgFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.sctSix .cardContainer .boxes h4 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-family: var(--font-3);
+}
+
+/*------------ Section # 7 ------------*/
+
+.main .sctSeven {
+  padding: 6rem 6%;
+  text-align: center;
+  font-family: var(--font-3);
+}
+
+.main .sctSeven .heading {
+  margin-bottom: 4rem;
+  font-size: 2.6rem;
+}
+
+.main .sctSeven .aboutTeam {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.sctSeven .aboutTeam .mbrCards {
+  width: 160px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aboutTeam .mbrCards .avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.aboutTeam .mbrCards .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutTeam .mbrCards h3 {
+  margin-bottom: 6px;
+}
+
+.aboutTeam .mbrCards span {
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: rgb(68, 68, 68);
+}
+
+/*------------ Section # 8 ------------*/
+
+.main .sctEight {
+  padding-bottom: 4%;
+  background-color: var(--color-7);
+}
+
+.main .sctEight .headContent {
+  text-align: center;
+  padding: 5% 8%;
+}
+
+.sctEight .headContent h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-family: var(--font-3);
+}
+
+.sctEight .headContent p {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.sctEight .qnaContainer {
+  padding: 0 6%;
+}
+
+.sctEight .qnaContainer .question {
+  margin: 1rem 0;
+  padding: 1rem;
+  font-family: var(--font-3);
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 14px;
+}
+
+.sctEight .qnaContainer .question h3 {
+  font-size: 2rem;
+}
+
+.sctEight .qnaContainer .question i {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.sctEight .qnaContainer p {
+  margin: 1rem;
+  padding: 1rem;
+  line-height: 1.7;
+  cursor: default;
+  display: none;
+}
+
+.sctEight .qnaContainer p.displayTog {
+  display: block;
+}
+
+/*------------ Section # 9 ------------*/
+
+.main .sctNine {
+  padding: 6rem 4%;
+}
+
+.sctNine .gall1 {
+  text-align: center;
+}
+
+.sctNine .gall1 h2,
+.sctNine .gall2 h2 {
+  font-size: 3rem;
+  font-family: var(--font-3);
+}
+
+.sctNine .gall1 .gallery {
+  margin-top: 2.6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.sctNine .gall1 .gallery .imgFrame {
+  width: 300px;
+  height: 340px;
+  overflow: hidden;
+}
+
+.gall1 .gallery .imgFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.gall1 .gallery .imgFrame:hover img {
+  transform: scale(1.1);
+}
+
+.sctNine .gall2 {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.sctNine .gall2 .events {
+  margin-top: 2.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.8rem;
+}
+
+.gall2 .events .evtCards {
+  width: 280px;
+  height: fit-content;
+}
+
+.gall2 .events .evtCards .evtImg {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: lightpink;
+}
+
+.events .evtCards .evtImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.events .evtCards h3 {
+  margin: 18px 0 8px;
+  font-size: 1.6rem;
+  font-family: var(--font-3);
+}
+
+.events .evtCards p {
+  font-size: 0.9rem;
+  padding: 0 6px;
+}
+
+.events .evtCards button {
+  border: none;
+  margin: 14px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 1rem 2.3rem;
+  color: var(--color-5);
+  border-radius: 28px;
+  background-color: var(--color-3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.events .evtCards button:hover {
+  background-color: var(--color-6);
+}
+
+/*------------ Section # 10 ------------*/
+
+.main .sctTen {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: var(--color-7);
+}
+
+.main .sctTen h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-3);
+}
+
+.main .sctTen .cardsCont {
+  width: fit-content;
+  margin: auto;
+  padding: 2rem 0;
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.sctTen .cardsCont .cards {
+  width: 260px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-1);
+}
+
+.sctTen .cardsCont .cards .cardUpper {
+  padding: 1.6rem 1rem;
+  text-align: left;
+  font-family: var(--font-3);
+  font-size: 1.3rem;
+  color: var(--color-1);
+  font-weight: 800;
+  background-color: var(--color-3);
+}
+
+.cardsCont .cards .cardUpper h3 {
+  margin-bottom: 10px;
+}
+
+.sctTen .cardsCont .cards .cardLower {
+  padding: 1rem;
+  text-align: center;
+}
+
+.cardsCont .cards .cardLower button {
+  margin-top: 20px;
+  border: none;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-5);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: var(--color-3);
+}
+
+.cardsCont .cards .cardLower button:hover {
+  background-color: var(--color-6);
+}
+
+/* ----------------------------------- */
+/*------------ F O O T E R ------------*/
+/* ----------------------------------- */
+
+.footer {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--color-7);
+}
+
+.footer .contact {
+  text-align: center;
+  padding: 4rem 2%;
+  margin-bottom: 4rem;
+}
+
+.footer .contact h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-family: var(--font-3);
+}
+
+.footer .contact p {
+  font-size: 1.4rem;
+}
+
+.footer .contact form {
+  width: fit-content;
+  margin: auto;
+  margin-top: 2.5rem;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.footer .contact form .fields {
+  position: relative;
+  padding: 26px 1rem 10px;
+}
+
+.footer .contact form .fields label {
+  position: absolute;
+  top: 0;
+  left: 6px;
+}
+
+.footer .contact form .fields input {
+  width: 16rem;
+  border: none;
+  outline: none;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 30px;
+}
+
+.footer .contact form button {
+  height: 50px;
+  align-self: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  cursor: pointer;
+  border-radius: 40px;
+  border: none;
+  color: var(--color-5);
+  background-color: var(--color-3);
+}
+
+.footer .contact form button:hover {
+  color: var(--color-1);
+  background-color: var(--color-4);
+}
+
+.footer .googleMap {
+  width: 100%;
+  height: 60vh;
+}
+
+.footer .copyRights {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 2%;
+  position: relative;
+  background-color: var(--color-2);
+}
+
+.footer .copyRights #arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--color-4);
+}
+
+.footer .copyRights #arrow i {
+  font-weight: 500;
+  color: var(--color-1);
+  font-size: 1.6rem;
+}
+
+.footer .copyRights p {
+  color: var(--color-1);
+}
+
+.footer .copyRights p span {
+  color: var(--color-4);
+}
+
+/* #main .sctTen > h2 {
+  transform: rotateX(90deg);
+} */
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/*--------------- R E S P O N S I V E N E S S ---------------*/
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+
+@media (max-width: 1080px) {
+  /* ----------------------------------- */
+  /*-------------- M A I N --------------*/
+  /* ----------------------------------- */
+
+  /*------------ Section # 10 ------------*/
+
+  .main .sctTen .cardsCont {
+    width: 100%;
+    padding: 2rem 6%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  .sctTen .cardsCont .cards {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 840px) {
+  /* ----------------------------------- */
+  /*------------ N A V B A R ------------*/
+  /* ----------------------------------- */
+  .nav .navLists {
+    padding: 5rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 100vh;
+    z-index: 100;
+    transform: translateX(-100%);
+    background-color: rgba(27, 27, 27, 0.692);
+    backdrop-filter: blur(10px);
+    transition: 0.4s ease-in-out;
+  }
+
+  .nav .navLists.menu {
+    transform: translateX(0);
+  }
+
+  .nav .navLists ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav .navLists ul li {
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  .nav .navLists ul li a {
+    color: var(--color-1);
+  }
+
+  .nav i {
+    display: block;
+  }
+
+  .nav .navLists i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--color-1);
+  }
+
+  /* ----------------------------------- */
+  /*------------ H E A D E R ------------*/
+  /* ----------------------------------- */
+
+  .header {
+    min-height: 76vh;
+  }
+
+  .header .headContent .title {
+    font-size: 3rem;
+  }
+
+  .header .headContent .para {
+    font-size: 1rem;
+  }
+
+  .header .headContent .btn {
+    padding: 1rem 1.8em;
+    font-size: 0.9rem;
+  }
+
+  /* ----------------------------------- */
+  /*-------------- M A I N --------------*/
+  /* ----------------------------------- */
+
+  /*------------ Section # 1 ------------*/
+
+  .main .sctOne {
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .main .sctOne div {
+    padding: 0;
+  }
+
+  .main .sctOne .box1 {
+    width: fit-content;
+    font-size: 1.2rem;
+  }
+
+  .main .sctOne .box2 {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .main .sctBtn {
+    margin-top: 20px;
+    padding: 1.1rem 1.6rem;
+    font-size: 0.9rem;
+  }
+
+  /*------------ Section # 3 ------------*/
+
+  .main .sctThree .heading {
+    font-size: 2.8rem;
+  }
+
+  .infoContainer .infoBoxes .infoIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .infoContainer .infoBoxes .infoHeading {
+    font-size: 1.4rem;
+    font-family: var(--font-1);
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  .infoContainer .infoBoxes .infoSprt {
+    width: 100px;
+    height: 6px;
+    background-color: var(--color-3);
+  }
+
+  .infoContainer .infoBoxes .infoDesc {
+    font-size: 1rem;
+  }
+
+  /*------------ Section # 4 ------------*/
+
+  .main .sctFour .sct4Desc {
+    padding: 6rem 10%;
+  }
+
+  .sctFour .sct4Desc .title {
+    font-size: 2.2rem;
+  }
+
+  .sctFour .sct4Desc .para {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .sct4Container .boxes .heading i {
+    font-size: 2.6rem;
+  }
+
+  .sct4Container .boxes .heading h3 {
+    font-size: 1.5rem;
+  }
+
+  .sct4Container .boxes p {
+    margin-left: 62px;
+    font-size: 1rem;
+  }
+
+  /*------------ Section # 5 & 6 ------------*/
+
+  .main .sctFive .heading,
+  .main .sctSix .heading {
+    font-size: 2.5rem;
+  }
+
+  /*------------ Section # 7 ------------*/
+
+  .main .sctSeven .aboutTeam {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
+  }
+
+  /*------------ Section # 8 ------------*/
+
+  .sctEight .headContent h2 {
+    font-size: 2.4rem;
+  }
+
+  .sctEight .headContent p {
+    font-size: 0.9rem;
+  }
+
+  .sctEight .qnaContainer .question {
+    padding: 0.8rem 1rem;
+  }
+
+  .sctEight .qnaContainer .question h3 {
+    font-size: 1.6rem;
+  }
+
+  .sctEight .qnaContainer .question i {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  .sctEight .qnaContainer p {
+    margin: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  /*------------ Section # 9 ------------*/
+
+  .sctNine .gall1 h2,
+  .sctNine .gall2 h2 {
+    font-size: 2.4rem;
+  }
+
+  /*------------ Section # 10 ------------*/
+
+  .main .sctTen h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  /* ----------------------------------- */
+  /*------------ H E A D E R ------------*/
+  /* ----------------------------------- */
+
+  .header {
+    min-height: 56vh;
+  }
+
+  .header .headContent .title {
+    font-size: 2rem;
+  }
+
+  .header .headContent .para {
+    font-size: 0.8rem;
+  }
+
+  .header .headContent .btn {
+    padding: 0.9rem 1.6em;
+    font-size: 0.8rem;
+  }
+
+  /* ----------------------------------- */
+  /*-------------- M A I N --------------*/
+  /* ----------------------------------- */
+
+  /*------------ Section # 3 ------------*/
+
+  .main .sctThree .heading {
+    font-size: 2.2rem;
+  }
+
+  .main .sctThree .infoContainer {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+
+  .sctThree .infoContainer .infoBoxes {
+    gap: 10px;
+  }
+
+  /*------------ Section # 4 ------------*/
+
+  .sctFour .sct4Desc .title {
+    font-size: 1.8rem;
+  }
+
+  .sctFour .sct4Desc .para {
+    font-size: 0.9rem;
+  }
+
+  .main .sctFour .sct4Container {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /*------------ Section # 5 & 6 ------------*/
+
+  .main .sctFive .heading,
+  .main .sctSix .heading {
+    font-size: 2.3rem;
+    margin-bottom: 4rem;
+  }
+
+  /*------------ Section # 7 ------------*/
+
+  .main .sctSeven .heading {
+    font-size: 2.2rem;
+  }
+
+  /*------------ Section # 8 ------------*/
+
+  .sctEight .headContent h2 {
+    font-size: 1.9rem;
+  }
+
+  .sctEight .headContent p {
+    font-size: 0.7rem;
+  }
+
+  .sctEight .qnaContainer .question h3 {
+    font-size: 1.3rem;
+  }
+
+  .sctEight .qnaContainer p {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  /*------------ Section # 10 ------------*/
+
+  .main .sctTen .cardsCont {
+    width: 100%;
+    padding: 2rem 6%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+
+  .sctTen .cardsCont .cards {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ----------------------------------- */
+  /*------------ F O O T E R ------------*/
+  /* ----------------------------------- */
+
+  /*---------- Contact Section ----------*/
+
+  .footer .contact h2 {
+    font-size: 2.4rem;
+  }
+
+  .footer .contact p {
+    font-size: 1rem;
+  }
+
+  .footer .contact form {
+    width: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+
+  .footer .contact form .fields input {
+    width: 100%;
+  }
+
+  .footer .contact form button {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  /* ----------------------------------- */
+  /*-------------- M A I N --------------*/
+  /* ----------------------------------- */
+
+  /*------------ Section # 7 ------------*/
+
+  .main .sctSeven .aboutTeam {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /*------------ Section # 8 ------------*/
+
+  .sctEight .headContent h2 {
+    font-size: 1.5rem;
+  }
+
+  .sctEight .headContent p {
+    font-size: 0.6rem;
+  }
+
+  .sctEight .qnaContainer .question {
+    padding: 0.7rem 1rem;
+  }
+
+  .sctEight .qnaContainer .question h3 {
+    font-size: 1rem;
+  }
+
+  .sctEight .qnaContainer .question i {
+    font-size: 1rem;
+  }
+
+  .sctEight .qnaContainer p {
+    padding: 0.4rem;
+    font-size: 0.7rem;
+  }
+}
